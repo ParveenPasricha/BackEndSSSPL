@@ -29,7 +29,7 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = [
-  "https://ambrosiaayurved.vercel.app",
+  "https://susolartech.vercel.app",
   "http://localhost:5173",
 ];
 app.use(
@@ -72,7 +72,7 @@ io.on("connection", (socket) => {
     const welcomeMessage = {
       from: "Admin",
       message:
-        "Hello! 👋 Welcome to Ambrosia Ayurved support. How can I help you today?",
+        "Hello! 👋 Welcome to Su Solartech support. How can I help you today?",
     };
     socket.emit("receive-message", welcomeMessage);
   });
