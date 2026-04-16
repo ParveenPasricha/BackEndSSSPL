@@ -22,6 +22,7 @@ const AdminContactRoute = require("./Routes/AdminRoute/AdminContactRoute");
 const AdminSliderRoute = require("./Routes/AdminRoute/AdminSliderRoute");
 const { authMiddleware } = require("./middleware/authMiddleware");
 const activityTracker = require("./middleware/activityTracker");
+const AdminInstallationRoute = require("./Routes/AdminRoute/AdminInstallationRoute")
 dotenv.config();
 
 const app = express();
@@ -166,6 +167,7 @@ app.use("/api/coupons", CouponRoute);
 app.use("/api/pushnotification", PushNotificationRoute);
 app.use("/api/diagnosis", diagnosisRoutes);
 app.use("/api/contact", AdminContactRoute);
+app.use("/api/installations", AdminInstallationRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome Node Project");

@@ -19,6 +19,7 @@ const storage = new CloudinaryStorage({
     else if (req.originalUrl.includes("user")) folder = "users";
     else if (req.originalUrl.includes("diagnosis") || req.originalUrl.includes("report") || req.originalUrl.includes("patient")) folder = "medical-reports";
     else if (req.originalUrl.includes("slider")) folder = "sliders";
+    else if (req.originalUrl.includes("installations")) folder = "installations";
 
     const ext = file.originalname.split(".").pop().toLowerCase();
     const videoFormats = ["mp4", "mov", "webm", "avi", "mkv", "ogg"];
